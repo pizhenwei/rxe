@@ -7,6 +7,11 @@
 #ifndef RXE_LOC_H
 #define RXE_LOC_H
 
+/* Compatibility: from_timer was renamed to timer_container_of in kernel 6.13+ */
+#ifndef timer_container_of
+#define timer_container_of(var, t, member) from_timer(var, t, member)
+#endif
+
 /* rxe_av.c */
 void rxe_init_av(struct rdma_ah_attr *attr, struct rxe_av *av);
 int rxe_av_chk_attr(struct rxe_qp *qp, struct rdma_ah_attr *attr);
