@@ -24,6 +24,8 @@ rdma_rxe-y := \
 	rxe_net.o \
 	rxe_hw_counters.o
 
+rdma_rxe-$(CONFIG_INFINIBAND_ON_DEMAND_PAGING) += rxe_odp.o
+
 rxe:
 	make -C /lib/modules/$(shell uname -r)/build M=$(shell pwd) modules
 
