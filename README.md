@@ -7,9 +7,13 @@ By building this out-of-tree RXE to set up software-level RDMA support,
 the CI can test the functionality.
 
 # Version
-RXE: linux-6.11
+RXE: linux-7.0
 
-For: 'ubuntu-latest' with linux 6.11.0-1012-azure
+For: 'ubuntu-latest' with linux 7.0.0-1017-azure
+
+Additional changes:
+
+- part of commit 2cba193628fe5
 
 # License
 All of these file are part of Linux kernel, and licensed as same as Linux kernel.
